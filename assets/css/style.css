@@ -1,0 +1,447 @@
+/* TABLE OF CONTENTS
+
+  1. GLOBAL STYLES
+
+  2. TYPOGRAPHY
+
+  3. LAYOUT
+    3.1 NAVIGATION
+    3.2 NAVBAR
+    3.3 FOOTER
+
+  4. COMPONENTS
+    4.1 BUTTONS
+    4.2 CARDS
+    4.3 INPUTS
+
+  5. Animations
+    5.1 Pulse
+
+  6. FLEX BOX
+
+*/
+
+/* ---------
+    1. GLOBAL STYLES
+    ---------
+*/
+
+
+body {
+  background-color: hsl(236, 42%, 19%);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ---------
+    2. TYPOGRAPHY
+    ---------
+*/
+
+.settings-title h2 {
+  color: #fff;
+}
+
+.settings-card-title {
+  color: #fff;
+}
+
+.user-avatar {
+    width: 60px;
+    height: 60px;
+    margin: 7px 0 0 50px;
+    padding: 10px;
+    border: 2px solid hsl(271, 60%, 68%);
+    border-radius: 60px;
+}
+
+.user-avatar img {
+  width: 50px;
+  padding-left: 5px;
+}
+
+/* ---------
+    3. LAYOUT
+    ---------
+*/
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 0px;
+}
+
+/* ---------
+    3.1 NAVIGATION
+    ---------
+*/
+
+.sidebar {
+}
+
+.settings-navigation {
+  background-color: hsl(238, 46%, 12%);
+  padding: 10px 30px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.settings-navigation ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 40px;
+}
+
+.settings-navigation li {
+  list-style-type: none;
+  padding: 5px 10px;
+  margin-top: 25px;
+}
+
+.settings-navigation li a {
+  color: rgb(255, 254, 254);
+  text-decoration: none;
+  background-color: hsl(236, 42%, 25%);
+  padding: 10px 60px;
+  border-radius: 7px;
+}
+
+.settings-navigation li a:hover {
+  background: hsl(236, 42%, 22%);
+  text-decoration: none;
+  font-weight: 700;
+  animation: pulse 1s infinite;
+  animation-timing-function: linear;
+}
+
+/* ---------
+    3.2 NAVBAR
+    ---------
+*/
+
+/* ---------
+    3.3 FOOTER
+    ---------
+*/
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  background: hsl(238, 46%, 12%);
+  width: 100%;
+  padding: 5px 20px;
+}
+
+.footer p {
+  color: #fff;
+}
+
+.footer .copyright {
+  display: inline-block;
+}
+
+.footer .developedBy {
+  display: inline-block;
+  float: right;
+}
+
+/* ---------
+    4.1 BUTTONS
+    ---------
+*/
+
+.saveChanges {
+  background-color: hsl(236, 42%, 19%);
+  border-radius: 20px;
+  border: 2px solid hsl(236, 39%, 38%);
+  padding: 10px 30px;
+  margin-top: 25px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  margin-left: 0;
+  margin-right: 0;
+  cursor: pointer;
+}
+
+.saveChanges:hover {
+  background-color: hsl(236, 39%, 15%);
+}
+
+.logout {
+  background-color: hsl(236, 42%, 25%);
+  border-radius: 7px;
+  border: 2px solid hsl(236, 39%, 38%);
+  padding: 10px 60px;
+  margin-top: 15px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  margin-left: 8px;
+  margin-right: 0;
+  cursor: pointer;
+  position: absolute;
+  bottom: 100px;
+}
+
+.logout:hover {
+  background-color: hsl(236, 39%, 15%);
+}
+
+/* ---------
+    4.2 CARDS
+    ---------
+*/
+
+.settings-card {
+  background-color: hsl(236, 33%, 35%);
+  border-radius: 5px;
+  border: 1px solid hsl(236, 30%, 44%);
+  padding: 20px 20px;
+}
+
+/* ---------
+    4.3 INPUTS
+    ---------
+*/
+
+.textBox {
+  border-radius: 18px;
+  border: 3px solid hsl(236, 42%, 19%);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 40px;
+  outline: none;
+  margin-top: 15px;
+  background: none;
+  color: #fff;
+}
+
+.textBox::placeholder {
+  color: #fff;
+}
+
+.textBox:focus {
+  color: hsl(271, 73%, 78%);
+  border: 3px solid hsl(289, 91%, 67%);
+}
+
+/* ---------
+    5. Animations
+    ---------
+*/
+
+/* ---------
+    5.1 Pulse
+    ---------
+*/
+
+@keyframes pulse {
+  0%,
+  100% {
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: scale(1.33);
+  }
+}
+
+.pulse-animation {
+  margin: 50px;
+  display: block;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #ff8717;
+  cursor: pointer;
+  animation: none;
+  float: left;
+}
+
+.pulse-animation:hover {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 hsla(47, 65%, 49%, 0.4);
+    box-shadow: 0 0 0 0 hsla(47, 65%, 49%, 0.4);
+  }
+  70% {
+    -moz-box-shadow: 0 0 0 30px rgba(204, 169, 44, 0);
+    box-shadow: 0 0 0 30px rgba(204, 169, 44, 0);
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+  }
+}
+
+
+/* ---------
+    6. FLEX BOX
+    ---------
+*/
+
+.row>[class^="col-"] {
+
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Responsiveness */
+
+/* phones */
+@media only screen and (min-width: 320px) {
+  .col-sm-1 {
+    width: 8.33%;
+  }
+
+  .col-sm-2 {
+    width: 16.66%;
+  }
+
+  .col-sm-3 {
+    width: 25%;
+  }
+
+  .col-sm-4 {
+    width: 33.33%;
+  }
+
+  .col-sm-5 {
+    width: 41.66%;
+  }
+
+  .col-sm-6 {
+    width: 50%;
+  }
+
+  .col-sm-7 {
+    width: 58.33%;
+  }
+  .col-sm-8 {
+    width: 66.66%;
+  }
+
+  .col-sm-9 {
+    width: 75%;
+  }
+
+  .col-sm-10 {
+    width: 83.33%;
+  }
+
+  .col-sm-11 {
+    width: 91.66%;
+  }
+
+  .col-sm-12 {
+    width: 100%;
+  }
+}
+
+/* tablets */
+@media only screen and (min-width: 768px) {
+  .col-md-1 {
+    width: 8.33%;
+  }
+
+  .col-md-2 {
+    width: 16.66%;
+  }
+
+  .col-md-3 {
+    width: 25%;
+  }
+
+  .col-md-4 {
+    width: 33.33%;
+  }
+
+  .col-md-5 {
+    width: 41.66%;
+  }
+
+  .col-md-6 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+
+  .col-md-7 {
+    width: 58.33%;
+  }
+  .col-md-8 {
+    width: 66.66%;
+  }
+
+  .col-md-9 {
+    width: 75%;
+  }
+
+  .col-md-10 {
+    width: 83.33%;
+  }
+
+  .col-md-11 {
+    width: 91.66%;
+  }
+
+  .col-md-12 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .col-lg-1 {
+    width: 8.33%;
+  }
+
+  .col-lg-2 {
+    width: 16.66%;
+  }
+
+  .col-lg-3 {
+    width: 25%;
+  }
+
+  .col-lg-4 {
+    width: 33.33%;
+  }
+
+  .col-lg-5 {
+    width: 41.66%;
+  }
+
+  .col-lg-6 {
+    width: 50%;
+  }
+
+  .col-lg-7 {
+    width: 58.33%;
+  }
+  .col-lg-8 {
+    width: 66.66%;
+  }
+
+  .col-lg-9 {
+    width: 75%;
+  }
+
+  .col-lg-10 {
+    width: 83.33%;
+  }
+
+  .col-lg-11 {
+    width: 91.66%;
+  }
+
+  .col-lg-12 {
+    width: 100%;
+  }
+}
