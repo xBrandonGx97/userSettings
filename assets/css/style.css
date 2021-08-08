@@ -96,7 +96,7 @@ body {
 .settings-navigation li {
   list-style-type: none;
   padding: 5px 10px;
-  margin-top: 25px;
+  margin-top: 10px;
 }
 
 .settings-navigation li a {
@@ -105,6 +105,8 @@ body {
   background-color: hsl(236, 42%, 25%);
   padding: 10px 60px;
   border-radius: 7px;
+  display: block;
+  width: 50px;
 }
 
 .settings-navigation li a:hover {
@@ -224,8 +226,8 @@ body {
 }
 
 .textBox:focus {
-  color: hsl(271, 73%, 78%);
-  border: 3px solid hsl(289, 91%, 67%);
+  color: hsl(237, 90%, 81%);
+  border: 3px solid hsl(237, 36%, 10%);
 }
 
 /* ---------
